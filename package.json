@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.0.1",
     "axios": "^0.21.1",
     "framer-motion": "^10.12.16",
     "next": "latest",
