@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import { ThemeProvider } from "next-themes";
 import {AnimatePresence, motion} from "framer-motion";
 import {useRouter} from "next/router";
+import { Analytics } from '@vercel/analytics/react';
 import Head from "next/head";
 const variants = {
     scaleDown: {
@@ -68,6 +69,7 @@ function MyApp({ Component, pageProps }) {
 
                 >
       <Component {...pageProps} />
+                    <Analytics />
                 </motion.div>
             </AnimatePresence>
         </div>
