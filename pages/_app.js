@@ -4,6 +4,12 @@ import {AnimatePresence, motion} from "framer-motion";
 import {useRouter} from "next/router";
 import { Analytics } from '@vercel/analytics/react';
 import Head from "next/head";
+import dynamic from 'next/dynamic'
+
+const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
+    ssr: false
+});
+
 const variants = {
     scaleDown: {
         scale: 0.8,
@@ -54,6 +60,22 @@ function MyApp({ Component, pageProps }) {
               <link rel="icon" href="/favicon.ico" />
           </Head>
     <ThemeProvider defaultTheme="dark" attribute="class">
+        <AnimatedCursor
+        innerSize={8}
+        outerSize={32}
+        innerScale={1}
+        outerScale={1.7}
+        outerAlpha={0}
+        outerStyle={{
+            border: '3px solid',
+
+
+        }}
+        innerStyle={{
+            border: '1px solid'
+        }}
+
+        />
         <div className="effect-3">
             <AnimatePresence
                 initial={false}
@@ -70,6 +92,7 @@ function MyApp({ Component, pageProps }) {
                 >
       <Component {...pageProps} />
                     <Analytics />
+
                 </motion.div>
             </AnimatePresence>
         </div>

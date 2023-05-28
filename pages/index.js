@@ -7,6 +7,8 @@ import Hero from "../components/Hero";
 import getLatestRepos from "@lib/getLatestRepos";
 import userData from "@constants/data";
 
+
+
 export default function Home({ repositories }) {
   return (
     <ContainerBlock
@@ -16,7 +18,9 @@ export default function Home({ repositories }) {
       <Hero />
       <FavouriteProjects />
       <LatestCode repositories={repositories} />
+
     </ContainerBlock>
+
   );
 }
 

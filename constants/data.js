@@ -8,37 +8,43 @@ const userData = {
   address: "Junagadh, Gujarat, India.",
   projects: [
     {
-
+      idx:1,
       title: "Counter Blockchain App",
       link: "https://github.com/mihirh19/counterapp",
       imgUrl: "/Counerdapp.png",
     },
     {
+      idx:2,
       title: "Cineflicks",
       link: "https://github.com/mihirh19/Cineflicks",
       imgUrl: "/cineflicks.png",
     },
     {
+      idx:3,
       title: "todo app",
       link: "https://github.com/mihirh19/todo_web_app",
       imgUrl: "/todo.png",
     },
     {
+      idx:4,
       title: "cenametic",
       link: "https://github.com/mihirh19/cenamatic",
       imgUrl: "/Cenametic.png",
     },
     {
+      idx:5,
       title: "Newsgenix",
       link: "https://github.com/mihirh19/NewsMonkey",
       imgUrl: "/Newsgenix.png",
     },
     {
+      idx:6,
       title: "iNoteBook",
       link: "https://github.com/mihirh19/inotebook",
       imgUrl: "/INotebook.png",
     },
     {
+      idx:7,
       title: "Zomato Clone",
       link: "https://github.com/mihirh19/zomato_front_clone",
       imgUrl: "/Zomato.png",
@@ -46,7 +52,7 @@ const userData = {
   ],
   about: {
     title:
-      "I'm a software developer that loves building products and web applications that impact millions of lives",
+      "I'm a Full-Stack developer that loves building products and web applications that impact millions of lives",
     description: [
       `I've been developing full-stack application since I was 10 years old. I didn't know what full-stack meant at that time because the term was not coined back then. I'm so out of content right now that I'm literally crying writing this text since lorem text is so 2023 now.`,
       `After learning HTML and struggling with CSS, I came up with a brilliant idea of using bootstrap and tailwind so that I don't have to style everything by myself and - for obvious reasons - if you knew bootstrap and tailwind, you were cool.`,

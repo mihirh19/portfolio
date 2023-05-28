@@ -26,8 +26,8 @@ dependencies:
     specifier: 18.2.0
     version: 18.2.0(react@18.2.0)
   react-rough-notation:
-    specifier: ^1.0.1
-    version: 1.0.1(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^1.0.5
+    version: 1.0.5(react-dom@18.2.0)(react@18.2.0)
 
 devDependencies:
   autoprefixer:
@@ -679,15 +679,15 @@ packages:
       scheduler: 0.23.0
     dev: false
 
-  /react-rough-notation@1.0.1(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-UZQZ09XiZgbDRZFFP0qaFmTzs0rMKO929Npa5fHb2TOzLvKNEamaUtjRwjBx79cFzf+xMl/y8Y4HbYvvcKHQGQ==}
+  /react-rough-notation@1.0.5(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-TTDnw1Qn96PwitGsBsjNh4911+o26Vivj/dhHbsHHhN6lDgkQsFhv1X/eOnCjHA2EOyDE5JBQ1HEZ1yW8sCmKA==}
     peerDependencies:
-      react: ^16.13.1
-      react-dom: ^16.13.1
+      react: ^18.2.0
+      react-dom: ^18.2.0
     dependencies:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      rough-notation: 0.4.0
+      rough-notation: 0.5.1
     dev: false
 
   /react@18.2.0:
@@ -724,8 +724,8 @@ packages:
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
     dev: true
 
-  /rough-notation@0.4.0:
-    resolution: {integrity: sha512-hDgn9qMIxWnfY+WWjt30aLMtDHR13H8r/NI3EQNdJiEFAzpklH5nKg4eH/thpxCWTYzyg8ueMsKIfz9MzOBQ4Q==}
+  /rough-notation@0.5.1:
+    resolution: {integrity: sha512-ITHofTzm13cWFVfoGsh/4c/k2Mg8geKgBCwex71UZLnNuw403tCRjYPQ68jSAd37DMbZIePXPjDgY0XdZi9HPw==}
     dev: false
 
   /run-parallel@1.2.0:

@@ -1,6 +1,5 @@
 import React from "react";
 import userData from "@constants/data";
-
 export default function AboutMe() {
   return (
     <section className="bg-white dark:bg-gray-800">
@@ -189,6 +188,10 @@ export default function AboutMe() {
                   className="h-10 w-10 mx-4 my-4"
                   alt={"mysql"}/>
               <img
+                  src="https://cdn.simpleicons.org/postgresql"
+                  className="h-10 w-10 mx-4 my-4"
+                  alt={"postgresql"}/>
+              <img
                   src="https://cdn.simpleicons.org/numpy/2080c9"
                   className="h-10 w-10 mx-4 my-4"
                   alt={"mongodb"}/>
@@ -200,6 +203,14 @@ export default function AboutMe() {
                   src="https://cdn.simpleicons.org/git"
                   className="h-10 w-10 mx-4 my-4"
                   alt={"git"}/>
+              <img
+                  src="https://cdn.simpleicons.org/solidity"
+                  className="h-10 w-10 mx-4 my-4"
+                  alt={"solidity"}/>
+              <img
+                  src="https://cdn.simpleicons.org/postman"
+                  className="h-10 w-10 mx-4 my-4"
+                  alt={"solidity"}/>
             </div>
           </div>
         </div>
