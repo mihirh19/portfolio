@@ -63,20 +63,24 @@ function MyApp({ Component, pageProps }) {
         <AnimatedCursor
         innerSize={8}
         outerSize={32}
-        innerScale={1}
+        innerScale={0}
         outerScale={1.7}
-        outerAlpha={0}
+        outerAlpha={0.2}
+        showSystemCursor={true}
         outerStyle={{
-            border: '3px solid',
-
+            border: '2px solid',
+            mixBlendMode: 'exclusion'
 
         }}
+        trailingSpeed={4}
         innerStyle={{
-            border: '1px solid'
+
+            mixBlendMode: 'exclusion'
+
         }}
 
         />
-        <div className="effect-3">
+        <div className="effect-3    " >
             <AnimatePresence
                 initial={false}
                 mode={'wait'}
