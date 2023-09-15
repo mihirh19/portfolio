@@ -58,8 +58,8 @@ const userData = {
       `After learning HTML and struggling with CSS, I came up with a brilliant idea of using bootstrap and tailwind so that I don't have to style everything by myself and - for obvious reasons - if you knew bootstrap and tailwind, you were cool.`,
       `But now, I'm a legend. I've been coding in React, NextJs, Node.js, Express, MongoDB, MySQL, Bootstrap, Tailwind, C, C++,Python,Django,FastAPI,Flask programming language and frameworks etc to name a few. Although I barely know the syntax (Psst, Stack overflow!), I consider myself a Ninja developer I'm laughing right now.`,
     ],
-    currentProject: "Cineflicks",
-    currentProjectUrl: "https://github.com/mihirh19/Cineflicks",
+    currentProject: "quote-generator",
+    currentProjectUrl: "https://github.com/mihirh19/quote-generator",
   },
   experience: [
     {
