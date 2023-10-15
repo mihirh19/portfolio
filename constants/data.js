@@ -95,7 +95,7 @@ const userData = {
   resumeUrl:
     "https://drive.google.com/file/d/1xmE3BOmgM7TAOOgVp36xQIQvYDntDYoo/view?usp=sharing",
   socialLinks: {
-    instagram: "https://instagram.com/mihir___2107",
+    instagram: "https://www.instagram.com/_mihirh.21",
     twitter: "https://twitter.com/mihirh21",
     linkedin: "https://linkedin.com/in/mihir-hadavani-996263232",
     github: "https://github.com/mihirh19",
