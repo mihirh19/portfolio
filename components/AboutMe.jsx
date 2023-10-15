@@ -1,5 +1,8 @@
 import React from "react";
 import userData from "@constants/data";
+import Link from "next/link";
+import Image from "next/image";
+
 export default function AboutMe() {
   return (
     <section className="bg-white dark:bg-gray-800">
@@ -15,12 +18,13 @@ export default function AboutMe() {
             style={{ lineHeight: "3rem" }}
           >
             {userData.about.title}. Currently working on{" "}
-            <a
+            <Link
+              target={'_blank'}
               className="bg-red-500 rounded-md px-2 py-1 text-white"
               href={userData.about.currentProjectUrl}
             >
               {userData.about.currentProject} ✈️
-            </a>
+            </Link>
           </p>
         </div>
       </div>
@@ -34,12 +38,13 @@ export default function AboutMe() {
               </h1>
               <p className="text-lg text-gray-500 mt-4 dark:text-gray-300">
                 For any sort help / enquiry, shoot a{" "}
-                <a
+                <Link
+                  target={'_blank'}
                   href={`mailto:${userData.email}`}
                   className="text-gray-800 border-b-2 border-gray-800 dark:border-gray-300 font-bold dark:text-gray-300"
                 >
                   mail
-                </a>{" "}
+                </Link>{" "}
                 and I'll get back. I swear.
               </p>
             </div>
@@ -51,7 +56,8 @@ export default function AboutMe() {
             <div className="mt-4 ml-4">
 
               <div className="flex flex-row justify-start items-center ">
-                <a
+                <Link
+                  target={'_blank'}
                   href={userData.socialLinks.facebook}
                   className="flex flex-row items-center space-x-4 group"
                 >
@@ -60,10 +66,11 @@ export default function AboutMe() {
                     <div className="absolute h-0.5 w-full bg-gray-400 bottom-0 transform -translate-x-24 group-hover:translate-x-0 transition duration-300"></div>
                     Facebook
                   </div>
-                </a>
+                </Link>
               </div>
               <div className="flex flex-row justify-start items-center">
-                <a
+                <Link
+                  target={'_blank'}
                   href={userData.socialLinks.twitter}
                   className="flex flex-row items-center space-x-4 group"
                 >
@@ -72,10 +79,11 @@ export default function AboutMe() {
                     <div className="absolute h-0.5 w-full bg-gray-400 bottom-0 transform -translate-x-24 group-hover:translate-x-0 transition duration-300"></div>
                     Twitter
                   </div>
-                </a>
+                </Link>
               </div>
               <div className="flex flex-row justify-start items-center">
-                <a
+                <Link
+                  target={'_blank'}
                   href={userData.socialLinks.github}
                   className="flex flex-row items-center space-x-4 group"
                 >
@@ -84,10 +92,11 @@ export default function AboutMe() {
                     <div className="absolute h-0.5 w-full bg-gray-400 bottom-0 transform -translate-x-24 group-hover:translate-x-0 transition duration-300"></div>
                     GitHub
                   </div>
-                </a>
+                </Link>
               </div>
               <div className="flex flex-row justify-start items-center">
-                <a
+                <Link
+                  target={'_blank'}
                   href={userData.socialLinks.linkedin}
                   className="flex flex-row items-center space-x-4 group"
                 >
@@ -96,10 +105,11 @@ export default function AboutMe() {
                     <div className="absolute h-0.5 w-full bg-gray-400 bottom-0 transform -translate-x-24 group-hover:translate-x-0 transition duration-300"></div>
                     LinkedIn
                   </div>
-                </a>
+                </Link>
               </div>
               <div className="flex flex-row justify-start items-center">
-                <a
+                <Link
+                  target={'_blank'}
                   href={userData.socialLinks.instagram}
                   className="flex flex-row items-center space-x-4 group"
                 >
@@ -108,7 +118,7 @@ export default function AboutMe() {
                     <div className="absolute h-0.5 w-full bg-gray-400 bottom-0 transform -translate-x-28 group-hover:translate-x-0 transition duration-300"></div>
                     Instagram
                   </div>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -130,87 +140,87 @@ export default function AboutMe() {
               <img
                 src="https://cdn.simpleicons.org/javascript"
                 className="h-10 w-10 mx-4 my-4"
-               alt={"javascript"}/>
+                alt={"javascript"} />
               <img
                 src="https://cdn.simpleicons.org/c"
                 className="h-10 w-10 mx-4 my-4"
-               alt={"c"}/>
+                alt={"c"} />
               <img
-                  src="https://cdn.simpleicons.org/c++"
-                  className="h-10 w-10 mx-4 my-4"
-               alt={"c++"}/>
+                src="https://cdn.simpleicons.org/c++"
+                className="h-10 w-10 mx-4 my-4"
+                alt={"c++"} />
               <img
-                  src="https://cdn.simpleicons.org/python"
-                  className="h-10 w-10 mx-4 my-4"
-                  alt={"python"}/>
+                src="https://cdn.simpleicons.org/python"
+                className="h-10 w-10 mx-4 my-4"
+                alt={"python"} />
               <img
-                  src="https://cdn.simpleicons.org/html5"
-                  className="h-10 w-10 mx-4 my-4"
-                  alt={"html"}/>
+                src="https://cdn.simpleicons.org/html5"
+                className="h-10 w-10 mx-4 my-4"
+                alt={"html"} />
               <img
-                  src="https://cdn.simpleicons.org/css3"
-                  className="h-10 w-10 mx-4 my-4"
-                  alt={"css"}/>
+                src="https://cdn.simpleicons.org/css3"
+                className="h-10 w-10 mx-4 my-4"
+                alt={"css"} />
               <img
-                  src="https://cdn.simpleicons.org/django/2aa859"
-                  className="h-10 w-10 mx-4 my-4"
-                  alt={"django"}/>
+                src="https://cdn.simpleicons.org/django/2aa859"
+                className="h-10 w-10 mx-4 my-4"
+                alt={"django"} />
               <img
-                  src="https://cdn.simpleicons.org/fastapi"
-                  className="h-10 w-10 mx-4 my-4"
-                  alt={"fastapi"}/>
+                src="https://cdn.simpleicons.org/fastapi"
+                className="h-10 w-10 mx-4 my-4"
+                alt={"fastapi"} />
               <img
-                  src="https://cdn.simpleicons.org/express"
-                  className="h-10 w-10 mx-4 my-4"
-                  alt={"express"}/>
+                src="https://cdn.simpleicons.org/express"
+                className="h-10 w-10 mx-4 my-4"
+                alt={"express"} />
               <img
-                  src="https://cdn.simpleicons.org/flask"
-                  className="h-10 w-10 mx-4 my-4"
-                  alt={"flask"}/>
+                src="https://cdn.simpleicons.org/flask"
+                className="h-10 w-10 mx-4 my-4"
+                alt={"flask"} />
               <img
-                  src="https://cdn.simpleicons.org/nodedotjs"
-                  className="h-10 w-10 mx-4 my-4"
-                  alt={"nodejs"}/>
+                src="https://cdn.simpleicons.org/nodedotjs"
+                className="h-10 w-10 mx-4 my-4"
+                alt={"nodejs"} />
               <img
-                  src="https://cdn.simpleicons.org/react"
-                  className="h-10 w-10 mx-4 my-4"
-                  alt={"react "}/>
+                src="https://cdn.simpleicons.org/react"
+                className="h-10 w-10 mx-4 my-4"
+                alt={"react "} />
               <img
-                  src="https://cdn.simpleicons.org/nextdotjs/262629"
-                  className="h-10 w-10 mx-4 my-4"
-                  alt={"next js "}/>
+                src="https://cdn.simpleicons.org/nextdotjs/262629"
+                className="h-10 w-10 mx-4 my-4"
+                alt={"next js "} />
               <img
-                  src="https://cdn.simpleicons.org/mongodb"
-                  className="h-10 w-10 mx-4 my-4"
-                  alt={"mongodb"}/>
+                src="https://cdn.simpleicons.org/mongodb"
+                className="h-10 w-10 mx-4 my-4"
+                alt={"mongodb"} />
               <img
-                  src="https://cdn.simpleicons.org/mysql"
-                  className="h-10 w-10 mx-4 my-4"
-                  alt={"mysql"}/>
+                src="https://cdn.simpleicons.org/mysql"
+                className="h-10 w-10 mx-4 my-4"
+                alt={"mysql"} />
               <img
-                  src="https://cdn.simpleicons.org/postgresql"
-                  className="h-10 w-10 mx-4 my-4"
-                  alt={"postgresql"}/>
+                src="https://cdn.simpleicons.org/postgresql"
+                className="h-10 w-10 mx-4 my-4"
+                alt={"postgresql"} />
               <img
-                  src="https://cdn.simpleicons.org/numpy/2080c9"
-                  className="h-10 w-10 mx-4 my-4"
-                  alt={"mongodb"}/>
+                src="https://cdn.simpleicons.org/numpy/2080c9"
+                className="h-10 w-10 mx-4 my-4"
+                alt={"mongodb"} />
               <img
-                  src="https://cdn.simpleicons.org/pandas/1a1dbd"
-                  className="h-10 w-10 mx-4 my-4"
-                  alt={"pandas"}/>
+                src="https://cdn.simpleicons.org/pandas/1a1dbd"
+                className="h-10 w-10 mx-4 my-4"
+                alt={"pandas"} />
               <img
-                  src="https://cdn.simpleicons.org/git"
-                  className="h-10 w-10 mx-4 my-4"
-                  alt={"git"}/>
+                src="https://cdn.simpleicons.org/git"
+                className="h-10 w-10 mx-4 my-4"
+                alt={"git"} />
               <img
-                  src="https://cdn.simpleicons.org/solidity"
-                  className="h-10 w-10 mx-4 my-4"
-                  alt={"solidity"}/>
+                src="https://cdn.simpleicons.org/solidity"
+                className="h-10 w-10 mx-4 my-4"
+                alt={"solidity"} />
               <img
-                  src="https://cdn.simpleicons.org/postman"
-                  className="h-10 w-10 mx-4 my-4"
-                  alt={"solidity"}/>
+                src="https://cdn.simpleicons.org/postman"
+                className="h-10 w-10 mx-4 my-4"
+                alt={"solidity"} />
             </div>
           </div>
         </div>
