@@ -17,14 +17,14 @@ export default function AboutMe() {
             className="leading-loose text-2xl md:text-4xl font-semibold  mx-4"
             style={{ lineHeight: "3rem" }}
           >
-            {userData.about.title}. Currently working on{" "}
-            <Link
+            {userData.about.title}
+            {/* <Link
               target={'_blank'}
               className="bg-red-500 rounded-md px-2 py-1 text-white"
               href={userData.about.currentProjectUrl}
             >
               {userData.about.currentProject} ✈️
-            </Link>
+            </Link> */}
           </p>
         </div>
       </div>
@@ -64,7 +64,7 @@ export default function AboutMe() {
                   <div className="my-4">&rarr;</div>
                   <div className="text-lg text-gray-500 font-mono relative overflow-hidden dark:text-gray-300">
                     <div className="absolute h-0.5 w-full bg-gray-400 bottom-0 transform -translate-x-24 group-hover:translate-x-0 transition duration-300"></div>
-                    Facebook
+                    Facebook ⓕ
                   </div>
                 </Link>
               </div>
@@ -77,7 +77,7 @@ export default function AboutMe() {
                   <div className="my-4">&rarr;</div>
                   <div className="text-lg text-gray-500 font-mono relative overflow-hidden dark:text-gray-300">
                     <div className="absolute h-0.5 w-full bg-gray-400 bottom-0 transform -translate-x-24 group-hover:translate-x-0 transition duration-300"></div>
-                    Twitter
+                    Twitter 𝕏
                   </div>
                 </Link>
               </div>
@@ -90,7 +90,7 @@ export default function AboutMe() {
                   <div className="my-4">&rarr;</div>
                   <div className="text-lg text-gray-500 font-mono relative overflow-hidden dark:text-gray-300">
                     <div className="absolute h-0.5 w-full bg-gray-400 bottom-0 transform -translate-x-24 group-hover:translate-x-0 transition duration-300"></div>
-                    GitHub
+                    GitHub 🤖
                   </div>
                 </Link>
               </div>
@@ -103,7 +103,7 @@ export default function AboutMe() {
                   <div className="my-4">&rarr;</div>
                   <div className="text-lg text-gray-500 font-mono relative overflow-hidden dark:text-gray-300">
                     <div className="absolute h-0.5 w-full bg-gray-400 bottom-0 transform -translate-x-24 group-hover:translate-x-0 transition duration-300"></div>
-                    LinkedIn
+                    LinkedIn 💼
                   </div>
                 </Link>
               </div>
@@ -116,7 +116,7 @@ export default function AboutMe() {
                   <div className="my-4">&rarr;</div>
                   <div className="text-lg text-gray-500 font-mono relative overflow-hidden dark:text-gray-300">
                     <div className="absolute h-0.5 w-full bg-gray-400 bottom-0 transform -translate-x-28 group-hover:translate-x-0 transition duration-300"></div>
-                    Instagram
+                    Instagram 📱
                   </div>
                 </Link>
               </div>
@@ -138,19 +138,15 @@ export default function AboutMe() {
             </h1>
             <div className="flex flex-row flex-wrap mt-8">
               <img
-                src="https://cdn.simpleicons.org/javascript"
+                src="https://techstack-generator.vercel.app/js-icon.svg"
                 className="h-10 w-10 mx-4 my-4"
                 alt={"javascript"} />
               <img
-                src="https://cdn.simpleicons.org/c"
-                className="h-10 w-10 mx-4 my-4"
-                alt={"c"} />
-              <img
-                src="https://cdn.simpleicons.org/c++"
+                src="https://techstack-generator.vercel.app/cpp-icon.svg"
                 className="h-10 w-10 mx-4 my-4"
                 alt={"c++"} />
               <img
-                src="https://cdn.simpleicons.org/python"
+                src="https://techstack-generator.vercel.app/python-icon.svg"
                 className="h-10 w-10 mx-4 my-4"
                 alt={"python"} />
               <img
@@ -162,7 +158,11 @@ export default function AboutMe() {
                 className="h-10 w-10 mx-4 my-4"
                 alt={"css"} />
               <img
-                src="https://cdn.simpleicons.org/django/2aa859"
+                src="https://techstack-generator.vercel.app/java-icon.svg"
+                className="h-10 w-10 mx-4 my-4"
+                alt={"java"} />
+              <img
+                src="https://techstack-generator.vercel.app/django-icon.svg"
                 className="h-10 w-10 mx-4 my-4"
                 alt={"django"} />
               <img
@@ -182,7 +182,7 @@ export default function AboutMe() {
                 className="h-10 w-10 mx-4 my-4"
                 alt={"nodejs"} />
               <img
-                src="https://cdn.simpleicons.org/react"
+                src="https://techstack-generator.vercel.app/react-icon.svg"
                 className="h-10 w-10 mx-4 my-4"
                 alt={"react "} />
               <img
@@ -194,7 +194,7 @@ export default function AboutMe() {
                 className="h-10 w-10 mx-4 my-4"
                 alt={"mongodb"} />
               <img
-                src="https://cdn.simpleicons.org/mysql"
+                src="https://techstack-generator.vercel.app/mysql-icon.svg"
                 className="h-10 w-10 mx-4 my-4"
                 alt={"mysql"} />
               <img
@@ -220,7 +220,23 @@ export default function AboutMe() {
               <img
                 src="https://cdn.simpleicons.org/postman"
                 className="h-10 w-10 mx-4 my-4"
-                alt={"solidity"} />
+                alt={"postman"} />
+              <img
+                src="https://cdn.simpleicons.org/scikitlearn"
+                className="h-10 w-10 mx-4 my-4"
+                alt={"sklearn"} />
+              <img
+                src="https://techstack-generator.vercel.app/aws-icon.svg"
+                className="h-10 w-10 mx-4 my-4"
+                alt={"aws"} />
+              <img
+                src="https://techstack-generator.vercel.app/docker-icon.svg"
+                className="h-10 w-10 mx-4 my-4"
+                alt={"aws"} />
+              <img
+                src="https://techstack-generator.vercel.app/kubernetes-icon.svg"
+                className="h-10 w-10 mx-4 my-4"
+                alt={"k8s"} />
             </div>
           </div>
         </div>
