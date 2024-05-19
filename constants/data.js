@@ -1,7 +1,7 @@
 const userData = {
   githubUsername: "mihirh19",
   name: "Mihir Hadavani",
-  designation: "Full-Stack Developer",
+  designation: "Software Engineer",
   avatarUrl: "/Newavtar.gif",
   email: "miheerhadvani990@gmail.com",
   phone: "+91 9664576008",
@@ -9,42 +9,49 @@ const userData = {
   projects: [
     {
       idx: 1,
-      title: "Counter Blockchain App",
-      link: "https://github.com/mihirh19/counterapp",
-      imgUrl: "/Counerdapp.png",
+      title: "📈 FinGuru: News Research Tool",
+      link: "https://github.com/mihirh19/news_research_tool_Equity-Research-Analysis-",
+      imgUrl: "/finguru.png",
     },
+
     {
       idx: 2,
-      title: "Cineflicks",
-      link: "https://github.com/mihirh19/Cineflicks",
-      imgUrl: "/cineflicks.png",
+      title: "CashCraft",
+      link: "https://github.com/mihirh19/cashcraft",
+      imgUrl: "/cashcraft.png",
     },
     {
       idx: 3,
+      title: "CrowdFunding Web3 App",
+      link: "https://github.com/mihirh19/crowdfunding",
+      imgUrl: "/crowdfunding.png",
+    },
+    {
+      idx: 4,
       title: "todo app",
       link: "https://github.com/mihirh19/todo_web_app",
       imgUrl: "/todo.png",
     },
     {
-      idx: 4,
-      title: "cenametic",
-      link: "https://github.com/mihirh19/cenamatic",
-      imgUrl: "/Cenametic.png",
+      idx: 5,
+      title: "Placement recommendation",
+      link: "https://github.com/mihirh19/placement-recommendation",
+      imgUrl: "/placement.png",
     },
     {
-      idx: 5,
+      idx: 6,
       title: "Newsgenix",
       link: "https://github.com/mihirh19/NewsMonkey",
       imgUrl: "/Newsgenix.png",
     },
     {
-      idx: 6,
+      idx: 7,
       title: "iNoteBook",
       link: "https://github.com/mihirh19/inotebook",
       imgUrl: "/INotebook.png",
     },
     {
-      idx: 7,
+      idx: 8,
       title: "Zomato Clone",
       link: "https://github.com/mihirh19/zomato_front_clone",
       imgUrl: "/Zomato.png",
@@ -52,11 +59,12 @@ const userData = {
   ],
   about: {
     title:
-      "I'm a Full-Stack developer that loves building products and web applications that impact millions of lives",
+      "I'm an AI/ML plus Full-stack developer with a passion for creating innovative products and web applications that make a significant impact. I am currently working on integrating generative AI models to develop a state-of-the-art.",
     description: [
-      `I've been developing full-stack application since I was 10 years old. I didn't know what full-stack meant at that time because the term was not coined back then. I'm so out of content right now that I'm literally crying writing this text since lorem text is so 2023 now.`,
-      `After learning HTML and struggling with CSS, I came up with a brilliant idea of using bootstrap and tailwind so that I don't have to style everything by myself and - for obvious reasons - if you knew bootstrap and tailwind, you were cool.`,
-      `But now, I'm a legend. I've been coding in React, NextJs, Node.js, Express, MongoDB, MySQL, Bootstrap, Tailwind, C, C++,Python,Django,FastAPI,Flask programming language and frameworks etc to name a few. Although I barely know the syntax (Psst, Stack overflow!), I consider myself a Ninja developer I'm laughing right now.`,
+      `I started creating Full-stack applications when I was seventeen years old. I had no idea what "full-stack" meant back then because the term was still being coined. Once I mastered HTML and CSS, I came to understand the power of Tailwind and Bootstrap. It was so much easier to style with these frameworks, and to be honest, it made me feel pretty cool.`,
+      `As of right now, I'm somewhat of a coding legend 😅. React, Next.js, Node.js, Express, MongoDB, MySQL, Tailwind, C++, Python, FastAPI and many more technologies are among the many that I have worked with. While I still refer to Stack Overflow for syntax (who doesn't?).`,
+      `With my full-stack experience, I'm now integrating the amazing fields of ML and generative AI. It's an exciting time to be a developer, and I'm thrilled to be at the intersections of AI and full-stack programming.
+`,
     ],
     currentProject: "quote-generator",
     currentProjectUrl: "https://github.com/mihirh19/quote-generator",

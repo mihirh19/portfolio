@@ -35,17 +35,17 @@ export default function FavouriteProjects() {
         <div className="grid md:grid-cols-3 gap-8 lg:-mt-8 pb-40">
           {/* Single card */}
           <a target={"_blank"}
-            href="https://github.com/mihirh19/counterapp"
+            href="https://github.com/mihirh19/news_research_tool_Equity-Research-Analysis-"
             className="w-full block col-span-3 shadow-2xl"
           >
             <div className="relative overflow-hidden">
               <img
-                src="/Counerdapp.png"
+                src="/finguru.png"
                 alt="portfolio"
                 className="transform hover:scale-125 transition duration-2000 ease-out"
               />
               <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-red-500 rounded-md px-2">
-                Counter Blockchain app
+                📈 FinGuru: News Research Tool
               </h1>
               <h1 className="absolute bottom-10 left-10 text-gray-50 font-bold text-xl">
                 01
@@ -54,18 +54,18 @@ export default function FavouriteProjects() {
           </a>
           {/* Single card */}
           <a target={"_blank"}
-            href="https://github.com/mihirh19/todo_web_app"
+            href="https://github.com/mihirh19/cashcraft"
             className="w-full block col-span-3  sm:col-span-2 shadow-2xl"
           >
             <div className="relative overflow-hidden">
               {/* <div className="overlay absolute inset-0 bg-black bg-opacity-70 z-10"></div> */}
               <img
-                src="/todo_sm.png"
+                src="/cashcraft.png"
                 alt="portfolio"
                 className="transform hover:scale-125 transition duration-2000 ease-out"
               />
               <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-red-500 rounded-md px-2">
-                Todo API
+                CashCraft
               </h1>
               <h1 className="absolute bottom-10 left-10 text-gray-50 font-bold text-xl">
                 02
@@ -94,18 +94,18 @@ export default function FavouriteProjects() {
           </a>
           {/* Single card */}
           <a target={"_blank"}
-              href="https://github.com/mihirh19/cenamatic"
-              className="w-full block col-span-3 sm:col-span-1  object-cover"
+            href="https://github.com/mihirh19/crowdfunding"
+            className="w-full block col-span-3 sm:col-span-1  object-cover"
           >
             <div className="relative overflow-hidden shadow-2xl">
               {/* <div className="overlay absolute inset-0 bg-black bg-opacity-70 z-10"></div> */}
               <img
-                  src="/Cenametic.png"
-                  alt="portfolio"
-                  className="transform hover:scale-125 transition duration-2000 ease-out object-cover shadow-2xl"
+                src="/crowdfunding.png"
+                alt="portfolio"
+                className="transform hover:scale-125 transition duration-2000 ease-out object-cover shadow-2xl"
               />
               <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-red-500 rounded-md px-2">
-                Cinematic
+                CrowdFunding web3 app
               </h1>
               <h1 className="absolute bottom-10 left-10 text-gray-50 font-bold text-xl">
                 04
