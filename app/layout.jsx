@@ -5,6 +5,8 @@ import Providers from "@/components/providers/Providers";
 import SceneMount from "@/components/scene/SceneMount";
 import ScrollSceneSync from "@/components/scene/ScrollSceneSync";
 import Grain from "@/components/ui/Grain";
+import Nav from "@/components/ui/Nav";
+import Footer from "@/components/ui/Footer";
 import ScrollProgress from "@/components/ui/ScrollProgress";
 import { site } from "@/content/site";
 import "./globals.css";
@@ -43,7 +45,9 @@ export default function RootLayout({ children }) {
           <Providers>
             <SceneMount />
             <ScrollSceneSync />
+            <Nav />
             <main id="main" className="relative z-10">{children}</main>
+            <Footer />
             <ScrollProgress />
             <Grain />
           </Providers>
