@@ -40,3 +40,16 @@ test("contact form shows server validation errors", async ({ page }) => {
   await expect(page.getByText("Please enter a valid email")).toBeVisible();
   await expect(page.getByText("Please enter your name")).toBeVisible();
 });
+
+test("Ctrl+K palette jumps to a section", async ({ page }) => {
+  await page.goto("/");
+  // The theme toggle icon renders only after mount, so it signals hydration is done.
+  await expect(page.getByRole("button", { name: /Switch to/ }).locator("svg")).toBeVisible();
+  await page.keyboard.press("Control+KeyK");
+  const dialog = page.getByRole("dialog");
+  await expect(dialog).toBeVisible();
+  await page.keyboard.type("Journey");
+  await page.keyboard.press("Enter");
+  await expect(dialog).toBeHidden();
+  await expect(page.locator("#experience")).toBeInViewport();
+});

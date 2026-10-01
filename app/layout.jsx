@@ -8,6 +8,7 @@ import Grain from "@/components/ui/Grain";
 import Nav from "@/components/ui/Nav";
 import Footer from "@/components/ui/Footer";
 import Cursor from "@/components/ui/Cursor";
+import CommandPalette from "@/components/ui/CommandPalette";
 import ScrollProgress from "@/components/ui/ScrollProgress";
 import { site } from "@/content/site";
 import "./globals.css";
@@ -52,6 +53,7 @@ export default function RootLayout({ children }) {
             <ScrollProgress />
             <Grain />
             <Cursor />
+            <CommandPalette />
           </Providers>
         </body>
       </html>
