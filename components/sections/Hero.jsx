@@ -16,7 +16,7 @@ export default function Hero() {
           <SplitReveal className="block" delay={0.3}>Gamer.</SplitReveal>
         </h1>
         <p className="mt-8 max-w-xl text-lg text-muted md:text-xl">
-          I&apos;m an <RotatingWords words={site.roles} className="font-medium text-fg" /> building products at the
+          I&apos;m <RotatingWords words={site.roles} className="font-medium text-fg" />, building products at the
           intersection of AI and the web.
         </p>
         <div className="mt-10 flex flex-wrap gap-4">

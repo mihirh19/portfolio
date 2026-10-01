@@ -10,6 +10,8 @@ import Footer from "@/components/ui/Footer";
 import Cursor from "@/components/ui/Cursor";
 import CommandPalette from "@/components/ui/CommandPalette";
 import ScrollProgress from "@/components/ui/ScrollProgress";
+import Loader from "@/components/ui/Loader";
+import { loaderScript } from "@/lib/loader-script";
 import { site } from "@/content/site";
 import "./globals.css";
 
@@ -42,9 +44,13 @@ export default function RootLayout({ children }) {
         suppressHydrationWarning
         className={`${display.variable} ${sans.variable} ${mono.variable}`}
       >
+        <head>
+          <script dangerouslySetInnerHTML={{ __html: loaderScript }} />
+        </head>
         <body className="bg-bg font-sans text-fg antialiased">
           <a href="#main" className="skip-link">Skip to content</a>
           <Providers>
+            <Loader />
             <SceneMount />
             <ScrollSceneSync />
             <Nav />

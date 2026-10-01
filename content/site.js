@@ -2,7 +2,7 @@
 export const site = {
   name: "Mihir Hadavani",
   role: "Software Engineer",
-  roles: ["AI/ML engineer", "full-stack developer", "generative-AI builder", "gamer"],
+  roles: ["an AI/ML engineer", "a full-stack developer", "a generative-AI builder", "a gamer at heart"],
   url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   githubUsername: "mihirh19",
   email: "miheerhadvani990@gmail.com",
