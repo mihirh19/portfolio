@@ -2,6 +2,8 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import localFont from "next/font/local";
 import { ViewTransitions } from "next-view-transitions";
 import Providers from "@/components/providers/Providers";
+import SceneMount from "@/components/scene/SceneMount";
+import ScrollSceneSync from "@/components/scene/ScrollSceneSync";
 import { site } from "@/content/site";
 import "./globals.css";
 
@@ -37,6 +39,8 @@ export default function RootLayout({ children }) {
         <body className="bg-bg font-sans text-fg antialiased">
           <a href="#main" className="skip-link">Skip to content</a>
           <Providers>
+            <SceneMount />
+            <ScrollSceneSync />
             <main id="main" className="relative z-10">{children}</main>
           </Providers>
         </body>

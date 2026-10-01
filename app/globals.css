@@ -76,3 +76,9 @@
     @apply fixed top-3 left-3 z-[200] -translate-y-24 rounded-full bg-fg px-4 py-2 text-bg focus:translate-y-0;
   }
 }
+
+.scene-fallback {
+  background:
+    radial-gradient(60% 50% at 70% 30%, color-mix(in oklab, var(--accent) 35%, transparent), transparent),
+    radial-gradient(50% 40% at 20% 80%, color-mix(in oklab, var(--accent-2) 25%, transparent), transparent);
+}
