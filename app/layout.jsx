@@ -1,6 +1,7 @@
 import { Inter, Space_Grotesk } from "next/font/google";
 import localFont from "next/font/local";
 import { ViewTransitions } from "next-view-transitions";
+import { Analytics } from "@vercel/analytics/next";
 import Providers from "@/components/providers/Providers";
 import SceneMount from "@/components/scene/SceneMount";
 import ScrollSceneSync from "@/components/scene/ScrollSceneSync";
@@ -63,6 +64,7 @@ export default function RootLayout({ children }) {
             <Cursor />
             <CommandPalette />
           </Providers>
+          <Analytics />
         </body>
       </html>
     </ViewTransitions>

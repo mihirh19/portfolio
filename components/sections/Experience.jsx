@@ -9,7 +9,7 @@ export default function Experience() {
   const { scrollYProgress } = useScroll({ target: list, offset: ["start center", "end center"] });
 
   return (
-    <section id="experience" data-section data-scene="helix" className="relative py-32">
+    <section id="experience" data-section data-scene="helix" className="relative overflow-x-clip py-32">
       <div className="mx-auto max-w-5xl px-6 md:px-12">
         <p className="eyebrow">04 — Journey</p>
         <h2 className="section-title">Experience & education</h2>

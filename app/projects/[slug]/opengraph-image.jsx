@@ -25,7 +25,7 @@ export default async function ProjectOgImage({ params }) {
           color: "#e8eaf2",
         }}
       >
-        <div style={{ fontSize: 28, color: "#8a90a6", letterSpacing: 6 }}>{site.name.toUpperCase()} · PROJECT</div>
+        <div style={{ fontSize: 28, color: "#8a90a6", letterSpacing: 6 }}>{`${site.name.toUpperCase()} · PROJECT`}</div>
         <div style={{ fontSize: 88, fontWeight: 700 }}>{project?.title ?? "Project"}</div>
         <div style={{ fontSize: 34, color: "#7c5cff" }}>{project?.tech.join(" · ")}</div>
       </div>

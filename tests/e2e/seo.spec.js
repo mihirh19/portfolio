@@ -12,3 +12,9 @@ test("robots and OG image are served", async ({ request }) => {
   const og = await request.get("/opengraph-image");
   expect(og.headers()["content-type"]).toContain("image/png");
 });
+
+test("project OG image renders", async ({ request }) => {
+  const og = await request.get("/projects/finguru/opengraph-image");
+  expect(og.ok()).toBe(true);
+  expect(og.headers()["content-type"]).toContain("image/png");
+});
