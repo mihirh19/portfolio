@@ -30,3 +30,13 @@ test("experience timeline lists entries", async ({ page }) => {
   await page.goto("/");
   await expect(page.locator("#experience li")).toHaveCount(4);
 });
+
+test("contact form shows server validation errors", async ({ page }) => {
+  await page.goto("/#contact");
+  await page.getByLabel("Your name").fill("A");
+  await page.getByLabel("Email").fill("bad");
+  await page.getByLabel("Message").fill("short");
+  await page.getByRole("button", { name: "Send message" }).click();
+  await expect(page.getByText("Please enter a valid email")).toBeVisible();
+  await expect(page.getByText("Please enter your name")).toBeVisible();
+});
