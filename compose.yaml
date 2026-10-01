@@ -12,7 +12,7 @@ services:
     build:
       context: .
     env_file:
-        - .env.local
+        - .env
     environment:
       NODE_ENV: production
     ports:
