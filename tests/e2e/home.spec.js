@@ -18,3 +18,10 @@ test("theme toggle switches the html class", async ({ page }) => {
   await page.getByRole("button", { name: "Switch to light theme" }).click();
   await expect(html).toHaveClass(/light/);
 });
+
+test("projects rail lists every project with a detail link", async ({ page }) => {
+  await page.goto("/");
+  const links = page.locator('#projects a[href^="/projects/"]');
+  await expect(links).toHaveCount(8);
+  await expect(links.first()).toHaveAttribute("href", "/projects/finguru");
+});
