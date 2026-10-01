@@ -24,7 +24,8 @@ Rebuild the portfolio (currently Next.js Pages Router) on the **Next.js 16 App R
 - `next` (latest, App Router, Turbopack), `react` / `react-dom` 19
 - `tailwindcss` v4 + `@tailwindcss/postcss`
 - `three`, `@react-three/fiber`, `@react-three/drei`, `@react-three/postprocessing`
-- `motion` (UI motion, layout, cursor, shared-element transitions)
+- `motion` (UI motion, layout, cursor)
+- `next-view-transitions` (shared-element route transitions via the View Transitions API)
 - `gsap` + `@gsap/react` (ScrollTrigger, SplitText)
 - `lenis` (smooth scroll, synced with ScrollTrigger and the R3F frame loop)
 - `next-themes`, `cmdk`, `resend`, `zod`, `@vercel/analytics`
@@ -84,14 +85,14 @@ lib/
 | 1 | Hero | Split-text "Developer. Explorer. Gamer.", rotating role line, magnetic "View work" / "Resume" buttons | `brain`, cursor-reactive |
 | 2 | About | Pinned; paragraphs reveal word-by-word on scroll scrub; 3D-tilt avatar card | `network` with traveling pulse |
 | 3 | Skills | Bento grid of glass spotlight cards (AI/ML, Frontend, Backend, Languages) + marquee of chips | `rings` |
-| 4 | Projects | Pinned horizontal rail of large cards (parallax image, index, title, tech); cursor becomes "View"; click → shared-element transition to project page | `grid` with ripple under active card |
+| 4 | Projects | Pinned horizontal rail of large cards (hover-zoom image, index, title, tech); cursor becomes "View"; click → shared-element view transition to project page | `grid` |
 | 5 | Experience | Timeline line draws on scroll; entries alternate sides | `helix` |
 | 6 | GitHub | Latest 6 repos (stars, language dot, animated counters) | `galaxy` |
 | 7 | Contact | "Let's build something" headline, floating-label form, morphing submit button (idle → loading → ✓/✗), magnetic socials, footer with local time + back-to-top | `orb`, pulses on submit |
 
 ### Project page `/projects/[slug]`
 
-Hero image (shared-element from the card via Motion `layoutId`), title, summary, tech stack, highlights, GitHub/demo links, "Next project" link. `generateStaticParams` prebuilds all slugs; unknown slug → `notFound()`.
+Hero image (shared-element from the card via the View Transitions API using `next-view-transitions`; Motion `layoutId` cannot span App Router route changes), title, summary, tech stack, highlights, GitHub/demo links, "Next project" link. `generateStaticParams` prebuilds all slugs; unknown slug → `notFound()`.
 
 ### Global UI
 
