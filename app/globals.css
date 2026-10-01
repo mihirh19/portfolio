@@ -82,3 +82,33 @@
     radial-gradient(60% 50% at 70% 30%, color-mix(in oklab, var(--accent) 35%, transparent), transparent),
     radial-gradient(50% 40% at 20% 80%, color-mix(in oklab, var(--accent-2) 25%, transparent), transparent);
 }
+
+.spotlight::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  background: radial-gradient(400px circle at var(--x, 50%) var(--y, 50%), color-mix(in oklab, var(--accent) 22%, transparent), transparent 60%);
+}
+.spotlight:hover::before {
+  opacity: 1;
+}
+
+.marquee {
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+.marquee-track {
+  animation: marquee 40s linear infinite;
+}
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
