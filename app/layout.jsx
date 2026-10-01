@@ -7,6 +7,7 @@ import ScrollSceneSync from "@/components/scene/ScrollSceneSync";
 import Grain from "@/components/ui/Grain";
 import Nav from "@/components/ui/Nav";
 import Footer from "@/components/ui/Footer";
+import Cursor from "@/components/ui/Cursor";
 import ScrollProgress from "@/components/ui/ScrollProgress";
 import { site } from "@/content/site";
 import "./globals.css";
@@ -50,6 +51,7 @@ export default function RootLayout({ children }) {
             <Footer />
             <ScrollProgress />
             <Grain />
+            <Cursor />
           </Providers>
         </body>
       </html>
