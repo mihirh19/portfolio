@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg: #f6f4ef;
+  --fg: #121212;
+  --muted: #5b5b66;
+  --accent: #4f46e5;
+  --accent-2: #f97316;
+  --card: rgb(0 0 0 / 0.03);
+  --line: rgb(0 0 0 / 0.1);
+}
+
+.dark {
+  --bg: #05060a;
+  --fg: #e8eaf2;
+  --muted: #8a90a6;
+  --accent: #7c5cff;
+  --accent-2: #22d3ee;
+  --card: rgb(255 255 255 / 0.04);
+  --line: rgb(255 255 255 / 0.1);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-card: var(--card);
+  --color-line: var(--line);
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui;
+  --font-mono: var(--font-ubuntu-mono), ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    background: var(--bg);
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+  ::selection {
+    background: var(--accent);
+    color: white;
+  }
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-full bg-fg px-7 py-3.5 font-medium text-bg transition-colors hover:bg-accent hover:text-white;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 rounded-full border border-line px-7 py-3.5 font-medium transition-colors hover:border-fg;
+  }
+  .chip {
+    @apply rounded-full border border-line px-3 py-1 font-mono text-xs text-muted;
+  }
+  .eyebrow {
+    @apply font-mono text-xs tracking-[0.3em] text-muted uppercase;
+  }
+  .section-title {
+    @apply mt-4 font-display text-5xl leading-none font-semibold tracking-tight md:text-7xl;
+  }
+  .glass {
+    @apply rounded-3xl border border-line bg-card backdrop-blur-md;
+  }
+  .skip-link {
+    @apply fixed top-3 left-3 z-[200] -translate-y-24 rounded-full bg-fg px-4 py-2 text-bg focus:translate-y-0;
+  }
+}

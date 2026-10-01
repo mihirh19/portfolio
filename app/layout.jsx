@@ -1,0 +1,46 @@
+import { Inter, Space_Grotesk } from "next/font/google";
+import localFont from "next/font/local";
+import { ViewTransitions } from "next-view-transitions";
+import Providers from "@/components/providers/Providers";
+import { site } from "@/content/site";
+import "./globals.css";
+
+const display = Space_Grotesk({ subsets: ["latin"], variable: "--font-space-grotesk" });
+const sans = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const mono = localFont({
+  src: "../fonts/Ubuntu-Mono-bold.woff2",
+  variable: "--font-ubuntu-mono",
+  weight: "700",
+});
+
+export const metadata = {
+  metadataBase: new URL(site.url),
+  title: { default: `${site.name} — AI/ML & Full-stack Developer`, template: `%s — ${site.name}` },
+  description: site.about.headline,
+};
+
+export const viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#05060a" },
+    { media: "(prefers-color-scheme: light)", color: "#f6f4ef" },
+  ],
+};
+
+export default function RootLayout({ children }) {
+  return (
+    <ViewTransitions>
+      <html
+        lang="en"
+        suppressHydrationWarning
+        className={`${display.variable} ${sans.variable} ${mono.variable}`}
+      >
+        <body className="bg-bg font-sans text-fg antialiased">
+          <a href="#main" className="skip-link">Skip to content</a>
+          <Providers>
+            <main id="main" className="relative z-10">{children}</main>
+          </Providers>
+        </body>
+      </html>
+    </ViewTransitions>
+  );
+}
