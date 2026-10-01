@@ -25,3 +25,8 @@ test("projects rail lists every project with a detail link", async ({ page }) =>
   await expect(links).toHaveCount(8);
   await expect(links.first()).toHaveAttribute("href", "/projects/finguru");
 });
+
+test("experience timeline lists entries", async ({ page }) => {
+  await page.goto("/");
+  await expect(page.locator("#experience li")).toHaveCount(4);
+});

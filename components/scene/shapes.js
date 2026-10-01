@@ -96,11 +96,11 @@ const builders = {
       const r = Math.pow(rnd(), 0.6) * 3.2;
       const a = ((i % arms) / arms) * TAU + r * 1.4;
       const spread = (0.35 * (3.2 - r)) / 3.2 + 0.05;
-      return [
-        Math.cos(a) * r + (rnd() - 0.5) * spread,
-        (rnd() - 0.5) * spread * 0.6,
-        Math.sin(a) * r + (rnd() - 0.5) * spread,
-      ];
+      const x = Math.cos(a) * r + (rnd() - 0.5) * spread;
+      const y = (rnd() - 0.5) * spread * 0.6;
+      const z = Math.sin(a) * r + (rnd() - 0.5) * spread;
+      // tilt the disc ~55° toward the camera so the spiral arms read
+      return [x, y * 0.57 + z * 0.82, z * 0.57 - y * 0.82];
     });
   },
   orb(count, rnd) {
