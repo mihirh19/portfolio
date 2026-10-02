@@ -35,7 +35,7 @@ export default async function ProjectPage({ params }) {
         className="relative mt-12 aspect-[16/9] overflow-hidden rounded-3xl border border-line bg-card"
         style={{ viewTransitionName: `project-${project.slug}` }}
       >
-        <Image src={project.image} alt={`${project.title} screenshot`} fill priority sizes="(min-width: 1152px) 1152px, 100vw" className="object-cover" />
+        <Image src={project.image} alt={`${project.title} screenshot`} fill priority unoptimized={project.image.endsWith(".svg")} sizes="(min-width: 1152px) 1152px, 100vw" className="object-cover" />
       </div>
 
       <div className="mt-16 grid gap-12 md:grid-cols-[1fr_2fr]">

@@ -5,6 +5,7 @@ export const vertexShader = /* glsl */ `
   uniform float uSize;
   uniform float uPixelRatio;
   uniform float uBeat;
+  uniform float uVelocity;
   uniform vec3 uPointer;
   attribute vec3 aFrom;
   attribute vec3 aTo;
@@ -22,6 +23,8 @@ export const vertexShader = /* glsl */ `
     );
     p = mix(aScatter, p, smoothstep(0.0, 1.0, uAssemble));
     p *= 1.0 + uBeat * 0.15;
+    // scroll-speed wave: particles ripple vertically while the page moves
+    p.y += sin(p.x * 1.6 + uTime * 3.0) * uVelocity * 0.25;
 
     vec4 world = modelMatrix * vec4(p, 1.0);
     vec2 dir = world.xy - uPointer.xy;

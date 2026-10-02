@@ -6,10 +6,11 @@ import * as THREE from "three";
 import { buildShapes } from "./shapes";
 import { vertexShader, fragmentShader } from "./shaders";
 import { sceneStore } from "@/lib/scene-store";
+import { scrollState } from "@/lib/scroll-state";
 
 const DEFAULT_SEQUENCE = ["brain"];
 
-export default function Particles({ count, palette, reducedMotion }) {
+export default function Particles({ count, palette, reducedMotion, children }) {
   const points = useRef(null);
   const baseOpacity = useRef(palette.opacity);
   const invalidate = useThree((s) => s.invalidate);
@@ -37,6 +38,7 @@ export default function Particles({ count, palette, reducedMotion }) {
         uSize: { value: 24 },
         uPixelRatio: { value: 1 },
         uBeat: { value: 0 },
+        uVelocity: { value: 0 },
         uPointer: { value: new THREE.Vector3(99, 99, 0) },
         uColorA: { value: new THREE.Color() },
         uColorB: { value: new THREE.Color() },
@@ -133,6 +135,8 @@ export default function Particles({ count, palette, reducedMotion }) {
     u.uMorph.value = morph;
     u.uAssemble.value += (s.assemble - u.uAssemble.value) * (reducedMotion ? 1 : 1 - Math.exp(-delta * 2.5));
     u.uBeat.value = c.beat;
+    const vel = Math.max(-1, Math.min(1, scrollState.velocity / 40));
+    u.uVelocity.value += (vel - u.uVelocity.value) * (1 - Math.exp(-delta * 6));
     u.uPixelRatio.value = state.gl.getPixelRatio();
     if (pointerActive.current) {
       u.uPointer.value.set((state.pointer.x * state.viewport.width) / 2, (state.pointer.y * state.viewport.height) / 2, 0);
@@ -146,5 +150,9 @@ export default function Particles({ count, palette, reducedMotion }) {
     }
   });
 
-  return <points ref={points} geometry={geometry} material={material} frustumCulled={false} />;
+  return (
+    <points ref={points} geometry={geometry} material={material} frustumCulled={false}>
+      {children}
+    </points>
+  );
 }

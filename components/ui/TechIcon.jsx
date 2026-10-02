@@ -27,7 +27,7 @@ export default function TechIcon({ name, size = 20, className }) {
       loading="lazy"
       decoding="async"
       style={icon.scale !== 1 ? { transform: `scale(${icon.scale})` } : undefined}
-      className={cn("shrink-0", icon.mono && "dark:brightness-0 dark:invert", className)}
+      className={cn("shrink-0", icon.mono && "dark:brightness-0 dark:invert", icon.rounded && "rounded-md", className)}
     />
   );
 }

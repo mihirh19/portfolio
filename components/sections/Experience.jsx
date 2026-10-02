@@ -39,6 +39,16 @@ export default function Experience() {
                   <p className="text-muted">{e.org}</p>
                 )}
                 <p className="mt-3 text-muted">{e.desc}</p>
+                {e.points && (
+                  <ul className="mt-4 space-y-2 text-left text-sm text-muted">
+                    {e.points.map((pt) => (
+                      <li key={pt} className="flex gap-2">
+                        <span className="text-accent" aria-hidden>✦</span>
+                        {pt}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </motion.li>
             ))}
           </ol>

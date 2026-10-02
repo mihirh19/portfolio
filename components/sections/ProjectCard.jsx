@@ -18,6 +18,7 @@ export default function ProjectCard({ project, index }) {
           alt={`${project.title} screenshot`}
           fill
           sizes="(min-width: 1024px) 36vw, (min-width: 768px) 42vw, 80vw"
+          unoptimized={project.image.endsWith(".svg")}
           className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
         />
       </div>

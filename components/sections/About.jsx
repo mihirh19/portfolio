@@ -52,6 +52,19 @@ export default function About() {
         {site.about.paragraphs.map((p, i) => (
           <p key={i}>{p}</p>
         ))}
+        <div className="pt-10">
+          <h3 className="eyebrow">Certifications & achievements</h3>
+          <ul className="mt-6 divide-y divide-line border-y border-line text-base">
+            {site.certifications.map((c) => (
+              <li key={c.title}>
+                <a href={c.href} target="_blank" rel="noreferrer" className="flex items-baseline justify-between gap-6 py-4 text-fg hover:text-accent">
+                  <span>{c.title} ↗</span>
+                  <span className="shrink-0 font-mono text-xs text-muted">{c.date}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );

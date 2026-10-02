@@ -28,7 +28,7 @@ test("projects rail lists every project with a detail link", async ({ page }) =>
 
 test("experience timeline lists entries", async ({ page }) => {
   await page.goto("/");
-  await expect(page.locator("#experience li")).toHaveCount(4);
+  await expect(page.locator("#experience ol > li")).toHaveCount(4);
 });
 
 test("contact form shows server validation errors", async ({ page }) => {

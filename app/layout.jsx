@@ -26,7 +26,7 @@ const mono = localFont({
 
 export const metadata = {
   metadataBase: new URL(site.url),
-  title: { default: `${site.name} — AI/ML & Full-stack Developer`, template: `%s — ${site.name}` },
+  title: { default: `${site.name} — Software Engineer · AI Agents & RAG`, template: `%s — ${site.name}` },
   description: site.about.headline,
   openGraph: { type: "website", siteName: site.name, url: site.url },
   twitter: { card: "summary_large_image", creator: "@mihirh21" },
