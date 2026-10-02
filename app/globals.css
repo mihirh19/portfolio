@@ -143,3 +143,13 @@ html[data-intro-seen] .intro-loader {
     stroke-dashoffset: 0;
   }
 }
+
+/* Soft halo in the page background colour keeps text legible over the particle scene. */
+#main :where(h1, h2, h3, p, li, dt, dd, label, a) {
+  text-shadow:
+    0 0 18px var(--bg),
+    0 0 6px var(--bg);
+}
+#main .btn-primary {
+  text-shadow: none;
+}

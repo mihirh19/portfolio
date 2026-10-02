@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 
-// Words share one grid cell, so width stays at the longest word and no exit
-// animation has to finish before the next word can show.
+// Every word stays mounted and animates to shown/hidden, so no exit animation has
+// to finish before the next word can show. Only the active word takes up space.
 export default function RotatingWords({ words, className, interval = 2200 }) {
   const [i, setI] = useState(0);
 
@@ -14,7 +14,7 @@ export default function RotatingWords({ words, className, interval = 2200 }) {
   }, [words.length, interval]);
 
   return (
-    <span className="relative inline-grid overflow-hidden align-bottom">
+    <span className="relative inline-flex overflow-hidden align-bottom">
       {words.map((word, n) => (
         <motion.span
           key={word}
@@ -22,7 +22,7 @@ export default function RotatingWords({ words, className, interval = 2200 }) {
           initial={false}
           animate={n === i ? { y: "0%", opacity: 1 } : { y: n < i ? "-100%" : "100%", opacity: 0 }}
           transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className={`col-start-1 row-start-1 whitespace-nowrap ${className ?? ""}`}
+          className={`whitespace-nowrap ${n === i ? "relative" : "absolute top-0 left-0"} ${className ?? ""}`}
         >
           {word}
         </motion.span>

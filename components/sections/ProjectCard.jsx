@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Link } from "next-view-transitions";
+import TechIcon from "@/components/ui/TechIcon";
 
 export default function ProjectCard({ project, index }) {
   return (
@@ -26,7 +27,10 @@ export default function ProjectCard({ project, index }) {
       </div>
       <ul className="mt-3 flex flex-wrap gap-2">
         {project.tech.slice(0, 4).map((t) => (
-          <li key={t} className="chip">{t}</li>
+          <li key={t} className="chip inline-flex items-center gap-1.5">
+            <TechIcon name={t} size={14} />
+            {t}
+          </li>
         ))}
       </ul>
     </Link>

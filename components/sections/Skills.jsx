@@ -1,12 +1,13 @@
 import SpotlightCard from "@/components/ui/SpotlightCard";
 import Marquee from "@/components/ui/Marquee";
+import TechIcon from "@/components/ui/TechIcon";
 import { site } from "@/content/site";
 
 const spans = ["md:col-span-2", "", "", "md:col-span-2"];
 
 export default function Skills() {
   return (
-    <section id="skills" data-section data-scene="rings" className="relative py-32">
+    <section id="skills" data-section data-scene="rings" data-scene-opacity="0.45" className="relative py-32">
       <div className="mx-auto max-w-7xl px-6 md:px-12">
         <p className="eyebrow">02 — Toolkit</p>
         <h2 className="section-title">What I work with</h2>
@@ -16,7 +17,10 @@ export default function Skills() {
               <h3 className="font-mono text-sm tracking-widest text-accent uppercase">{s.group}</h3>
               <ul className="mt-6 flex flex-wrap gap-2">
                 {s.items.map((item) => (
-                  <li key={item} className="rounded-full border border-line px-4 py-2 text-sm">{item}</li>
+                  <li key={item} className="flex items-center gap-2 rounded-full border border-line bg-bg/40 py-1.5 pr-4 pl-2 text-sm">
+                    <TechIcon name={item} size={22} />
+                    {item}
+                  </li>
                 ))}
               </ul>
             </SpotlightCard>

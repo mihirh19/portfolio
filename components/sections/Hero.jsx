@@ -5,7 +5,7 @@ import { site } from "@/content/site";
 
 export default function Hero() {
   return (
-    <section id="hero" data-section data-scene="brain" className="relative flex min-h-svh flex-col justify-center px-6 pt-24 md:px-12">
+    <section id="hero" data-section data-scene="brain" data-scene-x="0.22" className="relative flex min-h-svh flex-col justify-center px-6 pt-24 md:px-12">
       <div className="mx-auto w-full max-w-7xl">
         <p className="eyebrow">{site.name} — {site.location}</p>
         <h1 className="mt-6 font-display text-[clamp(3.2rem,11vw,10rem)] leading-[0.9] font-semibold tracking-tight">

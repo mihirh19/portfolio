@@ -50,7 +50,7 @@ export default function Contact() {
   const status = pending ? "sending" : state.status;
 
   return (
-    <section id="contact" data-section data-scene="orb" className="relative py-32">
+    <section id="contact" data-section data-scene="orb" data-scene-x="0.25" data-scene-opacity="0.7" className="relative py-32">
       <div className="mx-auto grid max-w-7xl gap-16 px-6 md:grid-cols-2 md:px-12">
         <div>
           <p className="eyebrow">06 — Contact</p>

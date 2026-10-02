@@ -37,7 +37,7 @@ export default function Projects() {
   );
 
   return (
-    <section id="projects" ref={root} data-section data-scene="grid" className="relative">
+    <section id="projects" ref={root} data-section data-scene="grid" data-scene-opacity="0.4" className="relative">
       <div data-pin className="flex min-h-svh flex-col justify-center overflow-hidden py-24">
         <div className="px-6 md:px-12">
           <p className="eyebrow">03 — Selected work</p>

@@ -1,5 +1,7 @@
 import SpotlightCard from "@/components/ui/SpotlightCard";
 import CountUp from "@/components/ui/CountUp";
+import TechIcon from "@/components/ui/TechIcon";
+import { techIcon } from "@/lib/tech-icons";
 import { getLatestRepos, languageColor } from "@/lib/github";
 import { site } from "@/content/site";
 
@@ -16,7 +18,7 @@ export default async function GitHub() {
   ];
 
   return (
-    <section id="github" data-section data-scene="galaxy" className="relative py-32">
+    <section id="github" data-section data-scene="galaxy" data-scene-opacity="0.45" className="relative py-32">
       <div className="mx-auto max-w-7xl px-6 md:px-12">
         <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <div>
@@ -41,7 +43,11 @@ export default async function GitHub() {
                 <div className="mt-6 flex items-center gap-4 font-mono text-xs text-muted">
                   {r.language && (
                     <span className="flex items-center gap-1.5">
-                      <span className="size-2.5 rounded-full" style={{ background: languageColor(r.language) }} />
+                      {techIcon(r.language) ? (
+                        <TechIcon name={r.language} size={16} />
+                      ) : (
+                        <span className="size-2.5 rounded-full" style={{ background: languageColor(r.language) }} />
+                      )}
                       {r.language}
                     </span>
                   )}

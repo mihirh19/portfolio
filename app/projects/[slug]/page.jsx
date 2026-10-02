@@ -2,6 +2,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Link } from "next-view-transitions";
 import SceneOverride from "@/components/scene/SceneOverride";
+import TechIcon from "@/components/ui/TechIcon";
 import { getNextProject, getProject, site } from "@/content/site";
 
 export const dynamicParams = false;
@@ -42,7 +43,10 @@ export default async function ProjectPage({ params }) {
           <h2 className="eyebrow">Tech</h2>
           <ul className="mt-4 flex flex-wrap gap-2">
             {project.tech.map((t) => (
-              <li key={t} className="chip">{t}</li>
+              <li key={t} className="chip inline-flex items-center gap-2 py-1.5 text-sm">
+                <TechIcon name={t} size={18} />
+                {t}
+              </li>
             ))}
           </ul>
           <div className="mt-8 flex flex-wrap gap-3">

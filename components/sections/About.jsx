@@ -32,7 +32,7 @@ export default function About() {
   );
 
   return (
-    <section id="about" ref={root} data-section data-scene="network" className="relative">
+    <section id="about" ref={root} data-section data-scene="network" data-scene-x="0.25" data-scene-opacity="0.7" className="relative">
       <div data-pin className="flex min-h-svh items-center px-6 md:px-12">
         <div className="mx-auto grid w-full max-w-7xl items-center gap-12 md:grid-cols-[1fr_320px]">
           <div>

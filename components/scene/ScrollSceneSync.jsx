@@ -16,6 +16,8 @@ export default function ScrollSceneSync() {
       if (!els.length) return;
       sceneStore.set({
         sequence: els.map((el) => el.dataset.scene),
+        offsets: els.map((el) => Number(el.dataset.sceneX ?? 0)),
+        opacities: els.map((el) => Number(el.dataset.sceneOpacity ?? 1)),
         progress: computeSceneProgress(
           els.map((el) => el.getBoundingClientRect()),
           window.innerHeight,

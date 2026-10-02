@@ -11,6 +11,7 @@ const DEFAULT_SEQUENCE = ["brain"];
 
 export default function Particles({ count, palette, reducedMotion }) {
   const points = useRef(null);
+  const baseOpacity = useRef(palette.opacity);
   const invalidate = useThree((s) => s.invalidate);
   const shapes = useMemo(() => buildShapes(count), [count]);
 
@@ -50,7 +51,7 @@ export default function Particles({ count, palette, reducedMotion }) {
     const u = material.uniforms;
     u.uColorA.value.set(palette.colorA);
     u.uColorB.value.set(palette.colorB);
-    u.uOpacity.value = palette.opacity;
+    baseOpacity.current = palette.opacity;
     u.uSize.value = palette.size;
     u.uGlowBoost.value = palette.glowBoost;
     material.blending = palette.additive ? THREE.AdditiveBlending : THREE.NormalBlending;
@@ -91,15 +92,28 @@ export default function Particles({ count, palette, reducedMotion }) {
     let from;
     let to;
     let morph;
+    // Per-section placement: x offset (fraction of viewport width) and brightness.
+    let offset = 0;
+    let fade = 1;
     if (s.override) {
       from = to = s.override;
       morph = 0;
     } else {
       const f = Math.floor(c.progress);
+      const t = Math.min(f + 1, seq.length - 1);
       from = seq[f];
-      to = seq[Math.min(f + 1, seq.length - 1)];
+      to = seq[t];
       morph = c.progress - f;
+      const k = morph * morph * (3 - 2 * morph);
+      offset = (s.offsets[f] ?? 0) + ((s.offsets[t] ?? 0) - (s.offsets[f] ?? 0)) * k;
+      fade = (s.opacities[f] ?? 1) + ((s.opacities[t] ?? 1) - (s.opacities[f] ?? 1)) * k;
     }
+
+    // Shift aside only on wide screens; on phones keep it centered but a bit dimmer.
+    const wide = state.viewport.width / state.viewport.height > 1.1;
+    const targetX = wide ? offset * state.viewport.width : 0;
+    points.current.position.x += (targetX - points.current.position.x) * ease;
+    u.uOpacity.value = baseOpacity.current * fade * (wide ? 1 : 0.75);
 
     if (from !== c.from || to !== c.to) {
       geometry.attributes.aFrom.array.set(shapes[from]);
