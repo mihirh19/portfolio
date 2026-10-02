@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="75%"><stop offset="0" stop-color="#16213a"/><stop offset="1" stop-color="#07090f"/></radialGradient>
+    <linearGradient id="sh" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <g stroke="#2a3350" stroke-width="1">
+    <path d="M0 200H1600M0 400H1600M0 600H1600M0 800H1600M200 0V1000M400 0V1000M600 0V1000M800 0V1000M1000 0V1000M1200 0V1000M1400 0V1000"/>
+  </g>
+  <g fill="none" stroke="#3b4a72" stroke-width="3" stroke-dasharray="10 10">
+    <path d="M800 470 L300 230M800 470 L1300 230M800 470 L300 760M800 470 L1300 760M800 470 L800 860"/>
+  </g>
+  <g font-family="ui-monospace, Menlo, monospace" font-size="30" fill="#c8d0e6" text-anchor="middle">
+    <g><rect x="170" y="180" width="260" height="100" rx="18" fill="#111827" stroke="#22d3ee" stroke-width="2"/><text x="300" y="240">ledger</text></g>
+    <g><rect x="1170" y="180" width="260" height="100" rx="18" fill="#111827" stroke="#22d3ee" stroke-width="2"/><text x="1300" y="240">breaker</text></g>
+    <g><rect x="170" y="710" width="260" height="100" rx="18" fill="#111827" stroke="#a78bfa" stroke-width="2"/><text x="300" y="770">bank A</text></g>
+    <g><rect x="1170" y="710" width="260" height="100" rx="18" fill="#111827" stroke="#a78bfa" stroke-width="2"/><text x="1300" y="770">bank B</text></g>
+    <g><rect x="670" y="810" width="260" height="100" rx="18" fill="#111827" stroke="#f472b6" stroke-width="2"/><text x="800" y="870">kafka</text></g>
+  </g>
+  <path d="M800 300 L930 350 V470 C930 560 870 620 800 650 C730 620 670 560 670 470 V350 Z" fill="url(#sh)"/>
+  <path d="M745 470 L785 510 L860 430" fill="none" stroke="#07090f" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="800" y="120" font-family="ui-sans-serif, system-ui, sans-serif" font-size="84" font-weight="700" fill="#e6ebf7" text-anchor="middle" letter-spacing="10">KAVACH</text>
+</svg>

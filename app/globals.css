@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg: #f6f4ef;
+  --fg: #121212;
+  --muted: #5b5b66;
+  --accent: #4f46e5;
+  --accent-2: #f97316;
+  --card: rgb(0 0 0 / 0.03);
+  --line: rgb(0 0 0 / 0.1);
+}
+
+.dark {
+  --bg: #05060a;
+  --fg: #e8eaf2;
+  --muted: #8a90a6;
+  --accent: #7c5cff;
+  --accent-2: #22d3ee;
+  --card: rgb(255 255 255 / 0.04);
+  --line: rgb(255 255 255 / 0.1);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-card: var(--card);
+  --color-line: var(--line);
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui;
+  --font-mono: var(--font-ubuntu-mono), ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    background: var(--bg);
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+  ::selection {
+    background: var(--accent);
+    color: white;
+  }
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-full bg-fg px-7 py-3.5 font-medium text-bg transition-colors hover:bg-accent hover:text-white;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 rounded-full border border-line px-7 py-3.5 font-medium transition-colors hover:border-fg;
+  }
+  .chip {
+    @apply rounded-full border border-line px-3 py-1 font-mono text-xs text-muted;
+  }
+  .eyebrow {
+    @apply font-mono text-xs tracking-[0.3em] text-muted uppercase;
+  }
+  .section-title {
+    @apply mt-4 font-display text-5xl leading-none font-semibold tracking-tight md:text-7xl;
+  }
+  .glass {
+    @apply rounded-3xl border border-line bg-card backdrop-blur-md;
+  }
+  .skip-link {
+    @apply fixed top-3 left-3 z-[200] -translate-y-24 rounded-full bg-fg px-4 py-2 text-bg focus:translate-y-0;
+  }
+}
+
+.scene-fallback {
+  background:
+    radial-gradient(60% 50% at 70% 30%, color-mix(in oklab, var(--accent) 35%, transparent), transparent),
+    radial-gradient(50% 40% at 20% 80%, color-mix(in oklab, var(--accent-2) 25%, transparent), transparent);
+}
+
+.spotlight::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  background: radial-gradient(400px circle at var(--x, 50%) var(--y, 50%), color-mix(in oklab, var(--accent) 22%, transparent), transparent 60%);
+}
+.spotlight:hover::before {
+  opacity: 1;
+}
+
+.marquee {
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+.marquee-track {
+  animation: marquee 40s linear infinite;
+}
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.45s;
+}
+::view-transition-group(*) {
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html.custom-cursor,
+html.custom-cursor * {
+  cursor: none !important;
+}
+html.custom-cursor input,
+html.custom-cursor textarea {
+  cursor: text !important;
+}
+
+html[data-intro-seen] .intro-loader {
+  display: none;
+}
+.intro-stroke {
+  stroke-dasharray: 1400;
+  stroke-dashoffset: 1400;
+  animation: draw 1.4s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Soft halo in the page background colour keeps text legible over the particle scene. */
+#main :where(h1, h2, h3, p, li, dt, dd, label, a) {
+  text-shadow:
+    0 0 18px var(--bg),
+    0 0 6px var(--bg);
+}
+#main .btn-primary {
+  text-shadow: none;
+}

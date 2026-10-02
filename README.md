@@ -1,43 +1,30 @@
-## Portfolio Website For Developers 💯
+# Mihir Hadavani — Portfolio
 
+Cinematic portfolio built with Next.js 16 (App Router), React 19, Tailwind CSS 4, React Three Fiber, GSAP, Lenis and Motion. Runs on Bun.
 
-# Features
+## Develop
 
-- Responsive layout, works well on both Mobile and Desktop
-- Dark mode support. Click buttons to toggle dark mode and light mode.
-- Clear React components and tailwind styling.
-- Exact sections that a developer needs to showcase their skills.
-- Clear call to actions.
+```bash
+bun install
+cp .env.example .env   # fill in tokens
+bun run dev
+```
 
-# Pages
+## Test
 
-I've kept the pages as simple as possible. Only the required sections are included with minimal content.
+```bash
+bun test tests/unit
+bunx playwright install chromium
+bun run test:e2e
+```
 
-# Tech Stack
+## Edit content
 
-The website is built in my favourite Tech Stack and deployed on [Vercel](https://vercel.com)
+All copy, projects, skills and experience live in `content/site.js`.
 
-- [Next.js](https://nextjs.org) for building React Components.
-- [tailwindcss](https://tailwindcss.com) for styling.
-- [React Rough Notation](https://roughnotation.com) for Hero section highlighting.
-- [Vercel](https://vercel.com) for deployments and CI/CD.
+## Docker
 
-# Usage
-
-- Clone the repository using `git clone https://github.com/mihirh19/portfolio`
-- Install all the modules by using `npm i` or `npm install` or `yarn`
-- Run the local development server by using `npm run dev` or `yarn dev`
-- Make the required edits and deploy to YOUR GitHub repo for CI/CD.
-
-# Deployment
-
-Deployment can be done in 3 easy steps.
-
-- Login to [Vercel](https://vercel.com) or signup for an account if you don't have one.
-- Create a `New Project` and select YOUR GitHub repository of the portfolio project.
-- Wait for Vercel to deploy your project to production.
-
-# License
-
-This template is completely open source and free to use. Use it for client projects or your own portfolio project. Give me credits at the footer (If you wish, it'll help me a lot :)).
-
+```bash
+docker build -t portfolio .
+docker run -p 3000:3000 --env-file .env portfolio
+```
